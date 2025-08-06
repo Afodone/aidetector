@@ -1,0 +1,6 @@
+framework module Pods_AIDetector {
+  umbrella header "Pods-AIDetector-umbrella.h"
+
+  export *
+  module * { export * }
+}
