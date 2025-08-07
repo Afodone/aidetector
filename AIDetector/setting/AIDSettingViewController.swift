@@ -167,7 +167,7 @@ class AIDSettingViewController: AIDParentViewController,UITableViewDelegate,UITa
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 0 {
+        if indexPath.section == 1 {
             switch indexPath.row {
             case 0:
                 if let url = URL(string: aid_rateUrl){

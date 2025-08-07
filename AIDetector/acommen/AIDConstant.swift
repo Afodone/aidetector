@@ -27,13 +27,18 @@ let aid_1A1A1A:UIColor = aidHexColor("#1A1A1A")
 let aid_FF5D61:UIColor = aidHexColor("#FF5D61")
 let aid_363636:UIColor = aidHexColor("#363636")
 
-
-let aid_rateUrl = ""
-let aid_termUrl = ""
-let aid_shareUrl = ""
-let aid_policayUrl = ""
-
-let aid_contactEmail = ""
+/*
+ 包名 com.content.detector
+ App ID 6749672669
+ Contact 邮箱 yarakalma@yeah.net
+ 隐私条款 https://www.freeprivacypolicy.com/live/5b90c1f8-c567-4663-a97b-da7f543e2716
+ 使用条款 https://www.freeprivacypolicy.com/live/fe09ef82-b7ed-4dc5-9dac-79169a904732
+ */
+let aid_rateUrl = "itms-apps://itunes.apple.com/app/id\(6749672669)?action=write-review"
+let aid_termUrl = "https://www.freeprivacypolicy.com/live/fe09ef82-b7ed-4dc5-9dac-79169a904732"
+let aid_shareUrl = "itms-apps://itunes.apple.com/app/id\(6749672669)?action=write-review"
+let aid_policayUrl = "https://www.freeprivacypolicy.com/live/5b90c1f8-c567-4663-a97b-da7f543e2716"
+let aid_contactEmail = "yarakalma@yeah.net"
 
 
 func aidHexColor(_ hexString:String) -> UIColor{
