@@ -9,9 +9,7 @@ target 'AIDetector' do
 
  pod 'Toast-Swift'
  pod 'Popover'
- pod 'DeviceKit'
  pod 'Alamofire'
  pod 'SwiftyJSON'
  pod 'Kingfisher'
- pod 'PDFTextKit'
 end

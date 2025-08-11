@@ -1,40 +1,32 @@
 PODS:
   - Alamofire (5.10.2)
-  - DeviceKit (5.6.0)
   - Kingfisher (8.3.2)
   - Popover (1.3.0)
   - SwiftyJSON (5.0.2)
   - Toast-Swift (5.1.1)
-  - TPPDF (2.6.1)
 
 DEPENDENCIES:
   - Alamofire
-  - DeviceKit
   - Kingfisher
   - Popover
   - SwiftyJSON
   - Toast-Swift
-  - TPPDF
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - DeviceKit
     - Kingfisher
     - Popover
     - SwiftyJSON
     - Toast-Swift
-    - TPPDF
 
 SPEC CHECKSUMS:
   Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
-  DeviceKit: 9f2e0b68984a384f864b0f4e40a54bae43636bd8
   Kingfisher: 0621d0ac0c78fecb19f6dc5303bde2b52abaf2f5
   Popover: 10e1d9528f81d9504df984b7b3f491292bc1822d
   SwiftyJSON: f5b1bf1cd8dd53cd25887ac0eabcfd92301c6a5a
   Toast-Swift: 7a03a532afe3a560d4044bc7c237e2864d295173
-  TPPDF: e55bb2616d2bd7398f32b5b75efdcc7ad628ad13
 
-PODFILE CHECKSUM: 2d428388bd7626883695f04ee3a0d1c468d33a4b
+PODFILE CHECKSUM: a7ff6630d6a5589591ec126bbaa68da63231e082
 
 COCOAPODS: 1.16.2
