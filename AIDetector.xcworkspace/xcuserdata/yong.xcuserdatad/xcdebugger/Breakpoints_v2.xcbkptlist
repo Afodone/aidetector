@@ -50,6 +50,36 @@
             endingLineNumber = "156"
             landmarkName = "imageQuery(id:block:failBlock:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "49A7131D-158D-43A2-BC10-98FD13AD5342 - f551b38d2a6b83ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AIDetector.AIDService.imageQuery(id: Swift.String, block: (SwiftyJSON.JSON) -&gt; (), failBlock: (Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "AIDetector.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yong/Desktop/jz2025/AIDetector/AIDetector/home/data/AIDService+Image.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "156"
+                  endingLineNumber = "156">
+               </Location>
+               <Location
+                  uuid = "49A7131D-158D-43A2-BC10-98FD13AD5342 - f551b38d2a6b83ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AIDetector.AIDService.imageQuery(id: Swift.String, block: (SwiftyJSON.JSON) -&gt; (), failBlock: (Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "AIDetector.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yong/Desktop/jz2025/AIDetector/AIDetector/home/data/AIDService+Image.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "156"
+                  endingLineNumber = "156">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -78,26 +108,54 @@
             filePath = "AIDetector/home/data/AIDService+Image.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
             landmarkName = "startImageUpload(image:view:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9D0751E3-9D85-475C-9A39-BA314ED327C5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AIDetector/home/data/AIDService+Image.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "268"
-            endingLineNumber = "268"
-            landmarkName = "imageDelayResult(duration:id:)"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EFBA0C1C-3E82-46C0-86D9-4BE9344324DB - f4a31deb19077297"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Int, Swift.Error&gt;) -&gt; () in AIDetector.AIDService.startImageUpload(image: __C.UIImage, view: __C.UIView) -&gt; ()"
+                  moduleName = "AIDetector.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yong/Desktop/jz2025/AIDetector/AIDetector/home/data/AIDService+Image.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "250"
+                  endingLineNumber = "250">
+               </Location>
+               <Location
+                  uuid = "EFBA0C1C-3E82-46C0-86D9-4BE9344324DB - 88b819223e907752"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftyJSON.JSON) -&gt; () in closure #1 (Swift.Result&lt;Swift.Int, Swift.Error&gt;) -&gt; () in AIDetector.AIDService.startImageUpload(image: __C.UIImage, view: __C.UIView) -&gt; ()"
+                  moduleName = "AIDetector.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yong/Desktop/jz2025/AIDetector/AIDetector/home/data/AIDService+Image.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "250"
+                  endingLineNumber = "250">
+               </Location>
+               <Location
+                  uuid = "EFBA0C1C-3E82-46C0-86D9-4BE9344324DB - f308e320ba979fea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.String) -&gt; () in closure #1 (Swift.Result&lt;Swift.Int, Swift.Error&gt;) -&gt; () in AIDetector.AIDService.startImageUpload(image: __C.UIImage, view: __C.UIView) -&gt; ()"
+                  moduleName = "AIDetector.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yong/Desktop/jz2025/AIDetector/AIDetector/home/data/AIDService+Image.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "251"
+                  endingLineNumber = "251">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -110,8 +168,8 @@
             filePath = "AIDetector/home/data/AIDService+Image.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "242"
-            endingLineNumber = "242"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
             landmarkName = "startImageUpload(image:view:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -130,6 +188,114 @@
             endingLineNumber = "153"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "51EED1F1-46DE-4675-9839-C89DD2972AB2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AIDetector/home/data/AIDService+Image.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "277"
+            endingLineNumber = "277"
+            landmarkName = "imageDelayResult(duration:id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0E5ADAA7-3CD7-435A-9489-6E0EC8A551FD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AIDetector/home/data/AIDService+Image.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
+            landmarkName = "startImageUpload(image:view:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0E5ADAA7-3CD7-435A-9489-6E0EC8A551FD - 3dea42e00668bef5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AIDetector.AIDService.startImageUpload(image: __C.UIImage, view: __C.UIView) -&gt; ()"
+                  moduleName = "AIDetector.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yong/Desktop/jz2025/AIDetector/AIDetector/home/data/AIDService+Image.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "238"
+                  endingLineNumber = "238">
+               </Location>
+               <Location
+                  uuid = "0E5ADAA7-3CD7-435A-9489-6E0EC8A551FD - 3dea42e00668bef5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AIDetector.AIDService.startImageUpload(image: __C.UIImage, view: __C.UIView) -&gt; ()"
+                  moduleName = "AIDetector.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yong/Desktop/jz2025/AIDetector/AIDetector/home/data/AIDService+Image.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "238"
+                  endingLineNumber = "238">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F8D788CF-DAD3-44A7-BDC7-434F90155324"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AIDetector/home/data/AIDService+Image.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
+            landmarkName = "startImageDetection(image:view:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F8D788CF-DAD3-44A7-BDC7-434F90155324 - a1745a71c2e1eb34"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AIDetector.AIDService.startImageDetection(image: __C.UIImage, view: __C.UIView) -&gt; ()"
+                  moduleName = "AIDetector.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yong/Desktop/jz2025/AIDetector/AIDetector/home/data/AIDService+Image.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "226"
+                  endingLineNumber = "226">
+               </Location>
+               <Location
+                  uuid = "F8D788CF-DAD3-44A7-BDC7-434F90155324 - 4e8f68863ebb5011"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftyJSON.JSON) -&gt; () in AIDetector.AIDService.startImageDetection(image: __C.UIImage, view: __C.UIView) -&gt; ()"
+                  moduleName = "AIDetector.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yong/Desktop/jz2025/AIDetector/AIDetector/home/data/AIDService+Image.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "226"
+                  endingLineNumber = "226">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

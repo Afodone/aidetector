@@ -10,7 +10,7 @@ import PhotosUI
 import Kingfisher
 class AIDImageDetectViewController: AIDParentViewController {
 
-    let currentService = AIDService()
+    let currentService = AIDService.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,18 +61,13 @@ class AIDImageDetectViewController: AIDParentViewController {
         loadingView.message = AIDString.localized("Loading...")
         loadingView.show(in: self.view)
         
-        
-        
-        currentService.startImageDetection(image: image, view: self.view) { json in
+        currentService.updateImageResultBlock = {json in
             loadingView.hide()
-      
-            
             let id = json["id"].stringValue
             let resultString = json.rawString() ?? ""
             let model  = AIDHumanData.init(id:id,result: resultString,type: 2)
             model.saveImage(image: image)
             AIDHumanDataFile.addHuman(data: model)
-            
             
             let ctr = AIDTextDetectionResultController()
             ctr.currentData = model
@@ -80,6 +75,11 @@ class AIDImageDetectViewController: AIDParentViewController {
             ctr.imageDetectionResult = json
             self.navigationController?.pushViewController(ctr, animated: true)
         }
+        
+        currentService.updateImageFailBlock = {
+            loadingView.hide()
+        }
+        currentService.startImageDetection(image: image, view: self.view)
         
 
     }
@@ -124,7 +124,7 @@ class AIDImageDetectViewController: AIDParentViewController {
     lazy var sureButton:UIButton = {
         let button = UIButton(type: .custom)
         button.setBackgroundImage(.button, for: .normal)
-        button.setTitle(AIDString.localized("Humanize Now"), for: .normal)
+        button.setTitle(AIDString.localized("Start Decteting"), for: .normal)
         button.titleLabel?.font = AIDFont.boldFont(16)
         
         button.setTitleColor(aid_FFFFFF, for: .normal)

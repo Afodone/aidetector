@@ -24,6 +24,8 @@ class AIDService{
     var didUpdateTextDetectionResultBlock:AIDHumanDetectionResultBlock?
     
     var updateImageResultBlock:((JSON) -> Void)?
+    var updateImageFailBlock:(() -> Void)?
+    
     
     var presigned_url:String?
     

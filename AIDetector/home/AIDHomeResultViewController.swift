@@ -27,7 +27,6 @@ class AIDHomeResultViewController: AIDParentViewController,UITableViewDelegate,U
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         aidTable.frame = .init(x: 0, y: self.view.safeAreaInsets.top, width: self.view.width, height: self.view.height-self.view.safeAreaInsets.top)
-        
     }
     
     func showBarbutton(){
@@ -43,19 +42,14 @@ class AIDHomeResultViewController: AIDParentViewController,UITableViewDelegate,U
         titelLabel.x = 30
         self.navigationItem.leftBarButtonItem = .init(customView: backView)
         titelLabel.text = AIDString.localized("Humanized Result")
-        
         backView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(backClick)))
-        
     }
     
     @objc func backClick(){
         self.navigationController?.popToRootViewController(animated: true)
     }
-
-    
  
     
-
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

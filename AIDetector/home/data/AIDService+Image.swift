@@ -9,10 +9,10 @@ import SwiftyJSON
 
 extension AIDService{
     
-    class func imagePreurl(block:@escaping(_ result:JSON) -> Void,failBlock:@escaping(_ errorMessage:String) -> Void){
+     func imagePreurl(block:@escaping(_ result:JSON) -> Void,failBlock:@escaping(_ errorMessage:String) -> Void){
 
         let urlString = "https://ai-image-detect.undetectable.ai/get-presigned-url?file_name=example.jpeg"
-        let headers = ["apikey":apiKey,"accept":"application/json"]
+         let headers = ["apikey":AIDService.apiKey,"accept":"application/json"]
                 
         let request = NSMutableURLRequest(url: NSURL(string:urlString)! as URL,
                                           cachePolicy: .reloadIgnoringLocalCacheData,
@@ -51,7 +51,7 @@ extension AIDService{
     }
     
     
-    class func imageUpload(url: URL, image: UIImage, completion: @escaping (Result<Int, Error>) -> Void) {
+     func imageUpload(url: URL, image: UIImage, completion: @escaping (Result<Int, Error>) -> Void) {
   
        guard let imageData = image.jpegData(compressionQuality: 1) else {
             completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "error"])))
@@ -90,12 +90,12 @@ extension AIDService{
         task.resume()
     }
     
-    class func imageDetection(filePath:String,block:@escaping(_ result:JSON) -> Void,failBlock:@escaping(_ errorMessage:String) -> Void){
+     func imageDetection(filePath:String,block:@escaping(_ result:JSON) -> Void,failBlock:@escaping(_ errorMessage:String) -> Void){
         
         let urlString = "https://ai-image-detect.undetectable.ai/detect"
         let headers = ["Content-Type": "application/json","accept": "application/json"]
         
-        let parameters = ["key":apiKey,
+         let parameters = ["key":AIDService.apiKey,
                           "url": "https://ai-image-detector-prod.nyc3.digitaloceanspaces.com/\(filePath)",
                           "generate_preview":true] as [String : Any]
         let postData = try? JSONSerialization.data(withJSONObject: parameters, options: [])
@@ -134,7 +134,7 @@ extension AIDService{
         dataTask.resume()
     }
     
-    class func imageQuery(id:String,block:@escaping(_ result:JSON) -> Void,failBlock:@escaping(_ errorMessage:String) -> Void){
+     func imageQuery(id:String,block:@escaping(_ result:JSON) -> Void,failBlock:@escaping(_ errorMessage:String) -> Void){
         
         let urlString1 = "https://ai-image-detect.undetectable.ai/query"
         let headers = ["Content-Type": "application/json","accept": "application/json"]
@@ -219,13 +219,16 @@ extension AIDService{
 
 extension AIDService{
     
-    func startImageDetection(image:UIImage,view:UIView,updateBlock:@escaping (JSON) -> Void){
-        updateImageResultBlock = updateBlock
-        AIDService.imagePreurl { [weak self]result in
+    func startImageDetection(image:UIImage,view:UIView){
+        
+        print("nil: ",self.updateImageResultBlock)
+        
+        imagePreurl { [weak self]result in
             self?.startImageUpload(image: image, view: view)
         } failBlock: { errorMessage in
             DispatchQueue.main.async {
                 view.makeToast(errorMessage)
+                self.updateImageFailBlock?()
             }
         }
     }
@@ -234,19 +237,21 @@ extension AIDService{
         
         guard let value = AIDService.share.presigned_url,let preURL = URL(string: value) else {return}
         
-        AIDService.imageUpload(url: preURL, image: image) { res in
+        imageUpload(url: preURL, image: image) { res in
             switch res {
             case .success(_):
                 let filePath = AIDService.share.file_path ?? ""
-                AIDService.imageDetection(filePath: filePath) { result in
+                self.imageDetection(filePath: filePath) { result in
                     let resultID = result["id"].stringValue
                     DispatchQueue.global().asyncAfter(deadline: .now()+4, execute: .init(block: {
-                        AIDService.share.imageDelayResult(duration: 1,id: resultID)
+                        self.imageDelayResult(duration: 1,id: resultID)
 
                     }))
                 } failBlock: { errorMessage in
                     DispatchQueue.main.async {
                         view.makeToast(errorMessage)
+                        self.updateImageFailBlock?()
+
                     }
                 }
                 
@@ -254,6 +259,8 @@ extension AIDService{
             case .failure(let error):
                 DispatchQueue.main.async {
                     view.makeToast(error.localizedDescription)
+                    self.updateImageFailBlock?()
+
                 }
                 break
             }
@@ -262,9 +269,9 @@ extension AIDService{
     }
     
     func imageDelayResult(duration:TimeInterval,id:String){
-        
+        print("get.result.id: ",id)
         DispatchQueue.global().asyncAfter(deadline: .now()+duration, execute: .init(block: {
-            AIDService.imageQuery(id: id) { [weak self] result in
+            self.imageQuery(id: id) { [weak self] result in
                 if result["status"].stringValue == "done"{
                     DispatchQueue.main.async {
                         self?.updateImageResultBlock?(result)
@@ -273,7 +280,8 @@ extension AIDService{
                     self?.imageDelayResult(duration: 1, id: id)
                 }
             } failBlock: { errorMessage in
-                
+                self.updateImageFailBlock?()
+
             }
         }))
         
